@@ -1,0 +1,13 @@
+# file generated with AI assistance: Claude Code - 2026-06-10 11:00:00 UTC
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    Dmstr\KeycloakSecurity\Security\KeycloakUserProvider:
+        public: true
+
+    Dmstr\KeycloakSecurity\Security\TestAuthenticator:
+        public: true

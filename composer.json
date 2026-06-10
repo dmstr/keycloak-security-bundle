@@ -1,0 +1,28 @@
+{
+    "name": "dmstr/keycloak-security-bundle",
+    "description": "Keycloak-backed Symfony Security: KeycloakUser + KeycloakUserProvider for JWT-authenticated users managed in Keycloak, plus a CLI for token retrieval.",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "diemeisterei GmbH",
+            "homepage": "https://diemeisterei.de"
+        }
+    ],
+    "require": {
+        "php": ">=8.2",
+        "symfony/framework-bundle": "^7.0",
+        "symfony/security-bundle": "^7.0",
+        "lexik/jwt-authentication-bundle": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dmstr\\KeycloakSecurity\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Dmstr\\KeycloakSecurity\\Tests\\": "tests/"
+        }
+    }
+}

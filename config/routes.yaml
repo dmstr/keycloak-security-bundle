@@ -1,0 +1,14 @@
+# file generated with AI assistance: Claude Code - 2026-07-02 19:00:00 UTC
+#
+# RFC 9728 protected-resource-metadata route. Import from the application:
+#
+#     # config/routes.yaml
+#     dmstr_keycloak_security:
+#         resource: '@KeycloakSecurityBundle/config/routes.yaml'
+#
+# Requires dmstr_keycloak_security.realm_url to be configured — without it the
+# controller service is not registered and this route must not be imported.
+dmstr_keycloak_security.protected_resource_metadata:
+    path: /.well-known/oauth-protected-resource
+    controller: Dmstr\KeycloakSecurity\Controller\ProtectedResourceMetadataController
+    methods: [GET]

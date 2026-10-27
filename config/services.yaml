@@ -9,5 +9,11 @@ services:
     Dmstr\KeycloakSecurity\Security\KeycloakUserProvider:
         public: true
 
-    Dmstr\KeycloakSecurity\Security\TestAuthenticator:
-        public: true
+# TestAuthenticator exists in the `test` environment only. A
+# `custom_authenticators` reference from `dev` or `prod` fails at compile time
+# with a ServiceNotFoundException instead of authenticating everyone as admin.
+when@test:
+    services:
+        Dmstr\KeycloakSecurity\Security\TestAuthenticator:
+            public: true
+# revised 2026-10-27 (TestAuthenticator only in test env)

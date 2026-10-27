@@ -21,8 +21,11 @@ PHPUnit (^12). Run locally with the bundled CLI-only Docker Compose
     docker compose run --rm php
 
 This installs dependencies and runs `vendor/bin/phpunit`. The same runs in CI
-via `.github/workflows/tests.yml`.
+via `.github/workflows/tests.yml`. Both the compose runner and CI run on
+PHP 8.5, while the package itself still supports PHP 8.4.
 
 ## Requirements
 
 PHP >= 8.4.
+
+<!-- revised 2026-10-27 (test runner and CI on PHP 8.5) -->

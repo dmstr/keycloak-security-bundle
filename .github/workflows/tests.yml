@@ -12,7 +12,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        php: ["8.4"]
+        php: ["8.5"]
     name: PHPUnit (PHP ${{ matrix.php }})
     steps:
       - uses: actions/checkout@v4
@@ -22,3 +22,4 @@ jobs:
           coverage: none
       - run: composer install --no-interaction --no-progress
       - run: vendor/bin/phpunit
+# revised 2026-10-27 (CI on PHP 8.5)
